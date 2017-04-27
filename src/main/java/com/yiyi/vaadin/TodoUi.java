@@ -28,6 +28,17 @@ public class TodoUi extends UI {
         addForm();
         addTodoList();
         addDeleteButton();
+        addOthField();
+    }
+
+    private void addOthField() {
+        HorizontalLayout oth = new HorizontalLayout();
+        DateField dateField = new DateField();
+        dateField.setDateFormat("yyyy-MM-dd");
+        oth.addComponent(dateField);
+        oth.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
+
+        layout.addComponent(oth);
     }
 
     private void setupLayout() {
